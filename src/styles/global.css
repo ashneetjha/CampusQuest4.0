@@ -1,0 +1,159 @@
+/* =================================================================
+   global.css
+   ================================================================= */
+
+/* --- Font Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&family=Cinzel:wght@400;600;700;900&family=Unifraktur+Maguntia&family=Simonetta:wght@400;700&display=swap');
+
+/* --- Tailwind CSS --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Local Font Definitions --- */
+@font-face {
+  font-family: 'Sherlock Press';
+  src: url('../assets/fonts/FontsFree-Net-Sherlock-Press-Personal-Use.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UnifrakturMaguntia';
+  src: url('../assets/fonts/UnifrakturMaguntia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Simonetta';
+  src: url('../assets/fonts/Simonetta-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Global Styles --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: url('/cursor.svg') 16 16, auto !important;
+}
+
+/* FIXED: This rule now hides the root scrollbar */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #000; /* Sets the base background */
+  color: #D4AF37;
+}
+
+a, button {
+  cursor: url('/cursor.svg') 16 16, auto !important;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+/* --- Typography --- */
+section h2 {
+  font-family: 'Sherlock Press', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-unifraktur {
+  font-family: 'UnifrakturMaguntia', serif;
+}
+
+.font-simonetta {
+  font-family: 'Simonetta', serif;
+}
+
+/* --- Miscellaneous Styles --- */
+.sponsors-gradient-text {
+  background: linear-gradient(135deg, #FFE3AF 0%, #957B4A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+section {
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 4rem;
+  }
+}
+
+section#header {
+  padding-top: 0 !important;
+}
+
+
+/* --- Custom Scrollbar --- */
+/* FIXED: These styles now apply only to the body's scrollbar */
+body::-webkit-scrollbar {
+  width: 24px; 
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: url('/scroll.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+
+/* =================================================================
+   Animation Styles
+   ================================================================= */
+.section-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-container.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brown-strip {
+    display: block;
+    margin-top: -10px; 
+    position: relative; 
+}

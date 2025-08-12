@@ -1,0 +1,23 @@
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #D4AF37; /* Golden color */
+  color: #000; /* Black arrow */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #ffdd88; /* Lighter golden on hover */
+  transform: scale(1.1);
+}

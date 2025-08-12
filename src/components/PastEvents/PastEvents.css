@@ -1,0 +1,261 @@
+/* --- Main Section Styling --- */
+.past-events-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  overflow: hidden;
+  font-family: 'Cinzel', serif;
+  box-sizing: border-box;
+}
+
+/* --- Past Events Title Image --- */
+.past-events-title {
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  margin: 20px auto 40px auto;
+  position: relative;
+  left: 15px;
+}
+
+/* --- Swiper Carousel Styling --- */
+.mySwiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  background: transparent !important;
+  background-position: center;
+  background-size: cover;
+  /* FIXED: Increased slide size for better readability */
+  width: 320px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.75);
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none !important;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+/* --- Event Card Content --- */
+.event-card {
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.event-content {
+  color: #EAE0C8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.event-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* --- Specific Event Content Styling --- */
+.cad-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.cad-main-title {
+  /* FIXED: Increased font size */
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 5px 0 10px;
+  color: #FFD700;
+  text-shadow: 0 0 12px #FFD700;
+}
+
+.cad-tagline {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.cad-version {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.cad-tags {
+  font-size: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 10px;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+.other-event-logo {
+  /* FIXED: Increased font size */
+  font-size: 5rem;
+  margin-bottom: 12px;
+}
+
+.other-event-title {
+  font-size: 1.8rem;
+  margin-top: 0;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* --- Active Event Button --- */
+.active-event-button {
+  margin-top: 30px;
+  /* FIXED: Increased size and font */
+  padding: 14px 52px;
+  background-color: rgba(30, 20, 10, 0.55);
+  border: 2px solid #C5A565;
+  color: #EAE0C8;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  user-select: none;
+  cursor: default;
+}
+
+/* --- Swiper Pagination Dots Styling --- */
+.swiper-pagination-bullet {
+  background-color: #C5A565;
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FFD700;
+  opacity: 1;
+  box-shadow: 0 0 8px #FFD700;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    /* FIXED: Increased size */
+    width: 280px;
+    height: 420px;
+  }
+
+  .cad-main-title {
+    /* FIXED: Increased font size */
+    font-size: 3.2rem;
+  }
+
+  .other-event-logo {
+    /* FIXED: Increased font size */
+    font-size: 4.2rem;
+  }
+
+  .active-event-button {
+    /* FIXED: Increased size and font */
+    padding: 12px 40px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    /* FIXED: Increased size */
+    width: 240px;
+    height: 380px;
+  }
+
+  .cad-main-title {
+    /* FIXED: Increased font size */
+    font-size: 2.5rem;
+  }
+
+  .cad-version {
+    font-size: 2rem;
+  }
+
+  .other-event-logo {
+    /* FIXED: Increased font size */
+    font-size: 3.5rem;
+  }
+
+  .active-event-button {
+    /* FIXED: Increased size and font */
+    padding: 10px 32px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .past-events-section {
+    padding: 40px 10px;
+  }
+
+  .swiper-slide {
+    /* FIXED: Increased size */
+    width: 200px;
+    height: 320px;
+  }
+
+  .cad-main-title {
+    /* FIXED: Increased font size */
+    font-size: 2rem;
+  }
+
+  .cad-version {
+    font-size: 1.5rem;
+  }
+
+  .other-event-logo {
+    /* FIXED: Increased font size */
+    font-size: 2.8rem;
+  }
+
+  .active-event-button {
+    /* FIXED: Increased size and font */
+    padding: 8px 24px;
+    font-size: 1rem;
+  }
+}
