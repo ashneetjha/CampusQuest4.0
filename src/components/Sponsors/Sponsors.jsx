@@ -95,33 +95,61 @@ const SponsorsPage = () => {
                         {/* Desktop Sponsors */}
                         {!isMobile && (
                             <div className="flex justify-center items-center gap-10 mt-10">
-                                <div className="w-48 h-72 bg-black/40 border border-gray-300 backdrop-blur-md" />
-                                <div className="w-48 h-72 bg-black/40 border border-gray-300 backdrop-blur-md" />
-                                <div className="w-48 h-72 bg-black/40 border border-gray-300 backdrop-blur-md" />
+                                <div className="w-48 h-72 bg-transparent border-transparent">
+                                    <img
+                                        src="/sponsor1_chaat_ka_chaska.jpg"
+                                        alt="Sponsor 1"
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div className="w-48 h-72 bg-transparent border-transparent">
+                                    <img
+                                        src="/coming_soon_desktop.jpg"
+                                        alt="Sponsor 2"
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div className="w-48 h-72 bg-transparent border-transparent">
+                                    <img
+                                        src="/coming_soon_desktop.jpg"
+                                        alt="Sponsor 3"
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
                             </div>
                         )}
 
                         {/* Mobile Sponsors - FIXED: Adjusted positioning to be responsive */}
                         {isMobile && (
                             <div className="relative w-full flex-1">
-                                <div className="absolute top-[18%] left-[8%] w-[40%] h-[25%] bg-white/70 border border-black flex flex-col items-center justify-center p-2 shadow">
+                                <div className="absolute top-[18%] left-[8%] w-[40%] h-[25%] bg-transparent border-transparent flex flex-col items-center justify-center p-2">
                                     <img
-                                        src="/10xlogo.png"
-                                        alt="10X Logo"
-                                        className="w-10 object-contain mb-1"
+                                        src="/sponsor1_chaat_ka_chaska.jpg"
+                                        alt="coming soon"
+                                        className="w-full h-full object-cover"
                                     />
                                     <p className="text-[0.5rem] font-simonetta text-black">
-                                        10X
+                                        {/* 10X */}
                                     </p>
                                 </div>
-                                <div className="absolute top-[48%] right-[8%] w-[40%] h-[25%] bg-white/70 border border-black flex items-center justify-center shadow">
+                                <div className="absolute top-[48%] right-[8%] w-[40%] h-[25%] bg-transparent border-transparent flex items-center justify-center">
+                                    <img
+                                        src="/coming_soon_mob.jpg"
+                                        alt="coming soon"
+                                        className="w-full h-full object-cover"
+                                    />
                                     <p className="text-[0.5rem] font-simonetta text-black">
-                                        Logo 2
+                                        {/* logo 2 */}
                                     </p>
                                 </div>
-                                <div className="absolute bottom-[5%] left-[8%] w-[40%] h-[25%] bg-white/70 border border-black flex items-center justify-center shadow">
-                                    <p className="text-[0.5rem] font-simonetta text-black">
-                                        Logo 3
+                                <div className="absolute bottom-[5%] left-[8%] w-[40%] h-[25%] bg-transparent border-transparent flex items-center justify-center">
+                                    <img
+                                        src="/coming_soon_mob.jpg"
+                                        alt="coming soon"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <p className="text-[0.5rem] text-black">
+                                        {/* Logo 3 */}
                                     </p>
                                 </div>
                             </div>
