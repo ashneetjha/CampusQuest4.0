@@ -11,15 +11,19 @@ const About = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Determine the correct background image based on screen size
+  const backgroundImage = isMobile ? '/mobile-background.png' : '/bg.png';
+
   return (
     // The main section now has a relative position to contain the borders and background
-    <section id="about" className="relative text-center py-16 px-4 overflow-hidden min-h-screen">
+    <section id="about" className="relative text-center py-16 px-4 overflow-hidden min-h-screen flex flex-col justify-center">
 
       {/* Background Image - visible on both desktop and mobile */}
       <div
         className="absolute inset-0 w-full h-full z-0"
         style={{
-          backgroundImage: 'url(/about_bg.png)',
+          // FIXED: The background image is now dynamic
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
