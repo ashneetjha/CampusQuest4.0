@@ -59,7 +59,7 @@ const Timeline = () => {
         
         {/* Mobile Timeline Board - FIXED: Corrected the image file extension */}
         <img
-          src="/TimelineMainImageMobile.png"
+          src="/TimelineMainImageMobile.jpg"
           alt="Timeline Board"
           className="w-full max-w-sm h-auto object-contain"
         />
