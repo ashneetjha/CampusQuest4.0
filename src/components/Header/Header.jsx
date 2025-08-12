@@ -22,14 +22,14 @@ const Header = () => {
 
   return (
     <>
-      {/* Main container - FIXED: Changed h-screen to min-h-screen and removed overflow-hidden */}
-      <div className="main-container bg-[#0a0602] min-h-screen w-full relative text-white">
+      {/* Main container - Ensures it takes at least the full screen height but can grow */}
+      <div className="main-container bg-[#0a0602] min-h-screen w-full relative text-white flex flex-col">
 
         {/* Background Image Layers */}
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center z-1" style={{ backgroundImage: `url(${backgroundUrl2})` }} />
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center z-2" style={{ backgroundImage: `url(${backgroundUrl3})` }} />
-        <div className="absolute bottom-0 left-0 w-full h-3/4 bg-cover bg-no-repeat bg-bottom z-3" style={{ backgroundImage: `url(${backgroundUrl4})` }} />
-        <div className="absolute bottom-0 right-0 w-full h-3/4 bg-cover bg-no-repeat bg-bottom opacity-15 z-4" style={{ backgroundImage: `url(${backgroundUrl5})` }} />
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center z-0" style={{ backgroundImage: `url(${backgroundUrl2})` }} />
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center z-0" style={{ backgroundImage: `url(${backgroundUrl3})` }} />
+        <div className="absolute bottom-0 left-0 w-full h-3/4 bg-cover bg-no-repeat bg-bottom z-0" style={{ backgroundImage: `url(${backgroundUrl4})` }} />
+        <div className="absolute bottom-0 right-0 w-full h-3/4 bg-cover bg-no-repeat bg-bottom opacity-15 z-0" style={{ backgroundImage: `url(${backgroundUrl5})` }} />
         
         {/* New Sherlock Holmes image positioned on the top left */}
         <img 
@@ -38,8 +38,8 @@ const Header = () => {
           className="absolute top-1/4 left-0 h-1/2 md:h-2/3 w-auto object-contain pointer-events-none z-10" 
         />
 
-        {/* Content Wrapper - FIXED: Removed h-full to allow content to define the height */}
-        <div className="relative z-20 flex flex-col">
+        {/* Content Wrapper */}
+        <div className="relative z-20 flex flex-col flex-grow">
 
           {/* Header Section */}
           <header className="w-full p-4 md:p-6 flex-shrink-0">
@@ -79,12 +79,14 @@ const Header = () => {
             </div>
           )}
 
-          {/* Main Content Area */}
-          <main className="flex-grow flex flex-col items-center justify-center text-center p-4">
+          {/* Main Content Area - FIXED: Simplified flex structure and added padding */}
+          <main className="flex-grow flex flex-col items-center justify-between text-center p-4">
             
+            {/* Top content block for spacing */}
+            <div></div>
+
             {/* Centered Content Block */}
-            <div className="w-full flex-grow flex flex-col items-center justify-center">
-              
+            <div className="w-full">
               <div className="mb-4 md:mb-8">
                 <img src={presentsLogoUrl} alt="10x Club" className="w-28 md:w-36 lg:w-40 mx-auto" />
                 <p className="font-kanit text-2xl md:text-3xl lg:text-4xl font-extralight text-white tracking-tighter -mt-2">presents</p>
@@ -92,8 +94,6 @@ const Header = () => {
 
               {/* Campus Quest Logo */}
               <div className="relative w-full flex flex-col items-center justify-center">
-                {/* Existing Sherlock Holmes image as a faint background */}
-                <img src="/sh.png" alt="Sherlock Holmes" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-auto opacity-20 z-0" />
                 <div className="relative z-20">
                   <img 
                     src="/CAMPUS-QUEST.png" 
@@ -109,7 +109,7 @@ const Header = () => {
             </div>
 
             {/* Registration Section */}
-            <div className="w-full flex flex-col items-center justify-center pt-8 pb-12 flex-shrink-0">
+            <div className="w-full flex flex-col items-center justify-center pt-8 pb-4">
               <a 
                 href="https://docs.google.com/forms/d/e/1FAIpQLSf58AyoFSQuUo1bEBK7PgUMEhF6cvg1iVvpyiQYopF0cmpb-Q/viewform?usp=dialog" 
                 target="_blank" 
