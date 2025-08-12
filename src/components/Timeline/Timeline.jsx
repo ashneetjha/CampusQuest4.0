@@ -57,9 +57,9 @@ const Timeline = () => {
       <div className="lg:hidden w-full bg-cover bg-center flex flex-col items-center justify-start p-4 py-8 min-h-screen" style={{ backgroundImage: "url('/background_Timeline.png')" }}>
         <img src="/TimelineTitle.png" alt="Timeline" className="mb-8 h-16 object-contain flex-shrink-0" />
         
-        {/* Mobile Timeline Board - FIXED: Corrected the image file extension */}
+        {/* Mobile Timeline Board - FIXED:*/}
         <img
-          src="/TimelineMainImageMobile.jpg"
+          src="/TimelineMainImageMobile.png"
           alt="Timeline Board"
           className="w-full max-w-sm h-auto object-contain"
         />
