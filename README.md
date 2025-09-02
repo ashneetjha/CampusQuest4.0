@@ -2,7 +2,7 @@ CampusQuest4.0
 🕵️‍♂️ Project Overview
 CampusQuest4.0 is a dynamic and interactive website built for a campus event. The site provides essential information about the event's timeline, prize pool, sponsors, and past events, all wrapped in a visually engaging and immersive user experience.
 
-Deployed link: campus-quest-4-0.vercel.app
+Deployed link: https://campus-quest-4-0.vercel.app
 
 🚀 Technologies Used
 React.js: A JavaScript library for building user interfaces.
